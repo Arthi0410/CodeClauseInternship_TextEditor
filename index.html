@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="title">
+        <form>
+            <label for="blktxt"
+                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Block
+                Title</label>
+            <br><br>
+            <input type="text" id="blktxt" name="Title" placeholder="Title of the document" />
+        </form>
+    </div>
+    <div class="container">
+        <div class="out">
+            <div class="advopt">
+                <select id="formatBlock" cls="adv">
+                    <option value="H1">H1</option>
+                    <option value="H2">H2</option>
+                    <option value="H3">H3</option>
+                    <option value="H4">H4</option>
+                    <option value="H5">H5</option>
+                    <option value="H6">H6</option>
+                    <option value="H7">H7</option>
+                </select>
+                <select id="fontName" cls="adv"></select>
+                <select id="fontSize" cls="adv"></select>
+                <div>
+                    <input type="color" id="forecolor" class="input-w" />
+                    <label for="forecolor">Font Color</label>
+                </div>
+                <div>
+                    <input type="color" id="backcolor" class="input-w" />
+                    <label for="backcolor">Highlight</label>
+                </div>
+            </div>
+        </div>
+        <div class="in">
+            <div class="buttons">
+                <button id="bold" class="modifiers">
+                    <i class="fa-solid fa-bold"></i>
+                </button>
+                <button id="italic" class="modifiers">
+                    <i class="fa-solid fa-italic"></i>
+                </button>
+                <button id="strikethrough" class="modifiers">
+                    <i class="fa-solid fa-strikethrough"></i>
+                </button>
+                <button id="underline" class="modifiers">
+                    <i class="fa-solid fa-underline"></i>
+                </button>
+                <button id="superscript" class="modifiers">
+                    <i class="fa-solid fa-superscript"></i>
+                </button>
+                <button id="subscript" class="modifiers">
+                    <i class="fa-solid fa-subscript"></i>
+                </button>
+            </div>
+            <div class="lists">
+                <button id="insertOrderedList" class="easy">
+                    <i class="fa-solid fa-list-ol"></i>
+                </button>
+                <button id="insertUnorderedList" class="easy">
+                    <i class="fa-solid fa-list"></i>
+                </button>
+                <button id="undo" class="easy">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </button>
+                <button id="redo" class="easy">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+            </div>
+            <div class="links">
+                <button id="link" class="linkit">
+                    <i class="fa fa-link"></i>
+                </button>
+                <button id="unlink" class="linkit">
+                    <i class="fa fa-unlink"></i>
+                </button>
+            </div>
+            <div class="alignment">
+                <button id="justifyLeft" class="alignit">
+                    <i class="fa-solid fa-align-left"></i>
+                </button>
+                <button id="justifyBetween" class="alignit">
+                    <i class="fa-solid fa-align-center"></i>
+                </button>
+                <button id="justifyRight" class="alignit">
+                    <i class="fa-solid fa-align-right"></i>
+                </button>
+                <button id="justifyFully" class="alignit">
+                    <i class="fa-solid fa-align-justify"></i>
+                </button>
+            </div>
+            <div class="indents">
+                <button id="indent" class="inds">
+                    <i class="fa-solid fa-indent"></i>
+                </button>
+                <button id="outdent" class="inds">
+                    <i class="fa-solid fa-outdent"></i>
+                </button>
+            </div>
+        </div>
+        <div class="xtra">
+            <div id="text-input" contenteditable="true"></div>
+        </div>
+    </div>
+</body>
+
+</html>
