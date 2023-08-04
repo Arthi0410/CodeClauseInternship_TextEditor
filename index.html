@@ -10,19 +10,28 @@
 </head>
 
 <body>
-    <div class="title">
-        <form>
-            <label for="blktxt"
-                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Block
-                Title</label>
-            <br><br>
-            <input type="text" id="blktxt" name="Title" placeholder="Title of the document" />
-        </form>
-    </div>
+
     <div class="container">
+        <div class="title">
+            <div class="titlename">
+                <label for="blktxt"
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Block
+                    Title</label>
+                <input type="text" id="blktxt" name="Title" placeholder="Title of the document" />
+            </div>
+            <div class="dropdown">
+                <button class="fileo"
+                    style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: medium;">Save <i
+                        class="fa-solid fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#">Save as TXT</a>
+                    <a href="#">Save as PDF</a>
+                </div>
+            </div>
+        </div>
         <div class="out">
             <div class="advopt">
-                <select id="formatBlock" cls="adv">
+                <select id="formatBlock" class="adv">
                     <option value="H1">H1</option>
                     <option value="H2">H2</option>
                     <option value="H3">H3</option>
@@ -31,36 +40,36 @@
                     <option value="H6">H6</option>
                     <option value="H7">H7</option>
                 </select>
-                <select id="fontName" cls="adv"></select>
-                <select id="fontSize" cls="adv"></select>
+                <select id="fontName" class="adv"></select>
+                <select id="fontSize" class="adv"></select>
                 <div>
-                    <input type="color" id="forecolor" class="input-w" />
+                    <input type="color" id="forecolor" class="input-w adv" />
                     <label for="forecolor">Font Color</label>
                 </div>
                 <div>
-                    <input type="color" id="backcolor" class="input-w" />
-                    <label for="backcolor">Highlight</label>
+                    <input type="color" id="backcolor" class="input-w adv" />
+                    <label for="backcolor">Text Highlight</label>
                 </div>
             </div>
         </div>
         <div class="in">
             <div class="buttons">
-                <button id="bold" class="modifiers">
+                <button id="bold" class="modifiers first">
                     <i class="fa-solid fa-bold"></i>
                 </button>
-                <button id="italic" class="modifiers">
+                <button id="italic" class="modifiers first">
                     <i class="fa-solid fa-italic"></i>
                 </button>
-                <button id="strikethrough" class="modifiers">
+                <button id="strikethrough" class="modifiers first">
                     <i class="fa-solid fa-strikethrough"></i>
                 </button>
-                <button id="underline" class="modifiers">
+                <button id="underline" class="modifiers first">
                     <i class="fa-solid fa-underline"></i>
                 </button>
-                <button id="superscript" class="modifiers">
+                <button id="superscript" class="modifiers second">
                     <i class="fa-solid fa-superscript"></i>
                 </button>
-                <button id="subscript" class="modifiers">
+                <button id="subscript" class="modifiers second">
                     <i class="fa-solid fa-subscript"></i>
                 </button>
             </div>
@@ -71,15 +80,15 @@
                 <button id="insertUnorderedList" class="easy">
                     <i class="fa-solid fa-list"></i>
                 </button>
-                <button id="undo" class="easy">
+                <button id="undo" class="do">
                     <i class="fa-solid fa-rotate-left"></i>
                 </button>
-                <button id="redo" class="easy">
+                <button id="redo" class="do">
                     <i class="fa-solid fa-rotate-right"></i>
                 </button>
             </div>
             <div class="links">
-                <button id="link" class="linkit">
+                <button id="createLink" class="linkit">
                     <i class="fa fa-link"></i>
                 </button>
                 <button id="unlink" class="linkit">
@@ -90,7 +99,7 @@
                 <button id="justifyLeft" class="alignit">
                     <i class="fa-solid fa-align-left"></i>
                 </button>
-                <button id="justifyBetween" class="alignit">
+                <button id="justifyCenter" class="alignit">
                     <i class="fa-solid fa-align-center"></i>
                 </button>
                 <button id="justifyRight" class="alignit">
@@ -108,11 +117,20 @@
                     <i class="fa-solid fa-outdent"></i>
                 </button>
             </div>
+            <div class="rem">
+                <button id="forwardDelete" class="special">
+                    <i class="fa-solid fa-delete-left"></i>
+                </button>
+                <button id="delete" class="modifiers first">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
         </div>
         <div class="xtra">
             <div id="text-input" contenteditable="true"></div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
